@@ -1,39 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_coffe/home.dart';
 
-class Welcome extends StatefulWidget {
-  const Welcome({super.key});
+class Beli extends StatefulWidget {
+  const Beli({super.key});
 
   @override
-  State<Welcome> createState() => _WelcomeState();
+  State<Beli> createState() => _BeliState();
 }
 
-class _WelcomeState extends State<Welcome> {
+class _BeliState extends State<Beli> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("images/logoKopi-crop.png"),
+            Image.asset('images/berhasil.png'),
             Text(
-              "KopiTokoTua",
+              "Pembelian berhasil",
               style: TextStyle(
-                  color: Colors.red.shade500,
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold),
+                  color: Colors.green.shade500,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 32),
             ),
-            Text(
-              "Konsisten sampai akhir",
-              style: TextStyle(
-                  color: Colors.red.shade300,
-                  fontSize: 16,
-                  fontWeight: FontWeight.normal),
+            const Text(
+              "silanhkan tunggu pesanan anda ",
+              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
             ),
             const SizedBox(
-              height: 32,
+              height: 358,
             ),
             ElevatedButton(
               onPressed: () {
@@ -53,7 +49,7 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
               child: const Text(
-                "Yuk ngopi",
+                "lanjut milih kopi",
                 style: TextStyle(color: Colors.white),
               ),
             )
