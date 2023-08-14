@@ -9,7 +9,9 @@ class Details extends StatefulWidget {
 }
 
 class _DetailsState extends State<Details> {
-  bool isChecked = false;
+  bool pakeSusu = false;
+  bool pakeKeju = false;
+  bool pakeSanten = false;
 
   @override
   Widget build(BuildContext context) {
@@ -127,10 +129,10 @@ class _DetailsState extends State<Details> {
                           'susu',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        value: isChecked,
+                        value: pakeSusu,
                         onChanged: (bool) {
                           setState(() {
-                            isChecked = !isChecked;
+                            pakeSusu = !pakeSusu;
                           });
                         },
                       ),
@@ -149,10 +151,10 @@ class _DetailsState extends State<Details> {
                           'keju',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        value: isChecked,
+                        value: pakeKeju,
                         onChanged: (bool) {
                           setState(() {
-                            isChecked = !isChecked;
+                            pakeKeju = !pakeKeju;
                           });
                         },
                       ),
@@ -171,11 +173,11 @@ class _DetailsState extends State<Details> {
                           'santen',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        value: isChecked,
+                        value: pakeSanten,
                         onChanged: (bool) {
                           setState(
                             () {
-                              isChecked = !isChecked;
+                              pakeSanten = !pakeSanten;
                             },
                           );
                         },
